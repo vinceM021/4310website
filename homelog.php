@@ -18,13 +18,14 @@ if ( isset($_SESSION['USER']['user_id']) ) {
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h1>Hello, this is the start page!</h1>
+      
 <?php
  if ($logged_in) {
    // user is logged in
    print "<h2>Hello " . $_SESSION['USER']['first_name'] . ", welcome back!</h2>";
    print "<p> You are logged in. </p>";
    print "<p> <a href='login.php?logout=1'>Click here to log out</a></p>";
+   print "<p> <a href='volunteer.php'>Click here to go to volunteers page</a></p>";
  } else {
    // user is not logged in
    print "<p> <a href='login.php'>Click here to log in</a></p>";
